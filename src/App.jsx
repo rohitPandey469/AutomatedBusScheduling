@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
-import Login from './pages/Login/Login'
+import React, { useState } from "react";
+import Navbar from "./components/Navbar/Navbar";
+import Login from "./pages/Login/Login";
 // import { Outlet } from 'react-router-dom'
 
 const App = () => {
@@ -8,9 +9,12 @@ const App = () => {
   //   <div>App</div>
   // )
 
-  return <>
-    <Login/>
-  </>
-}
+  return (
+    <>
+      {/* <Navbar /> */}
+      <Login />
+    </>
+  );
+};
 
-export default App
+export default App;

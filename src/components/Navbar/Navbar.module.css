@@ -1,0 +1,45 @@
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.25rem 0rem;
+    gap: 7rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #F5F5F5;
+}
+
+.logo {
+    width: 10rem;
+    height: 5rem;
+}
+
+.navbarElem {
+    width: 50%;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+    margin: 0rem 2rem;
+    padding: 0rem 1rem;
+}
+
+.link{
+    text-decoration: none;
+    color: #000000;
+}
+
+.account {
+    display: flex;
+    align-items: center;
+}
+
+.account img {
+    padding: 0rem 0.5rem;
+}
