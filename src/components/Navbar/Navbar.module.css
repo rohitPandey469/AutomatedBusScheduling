@@ -1,4 +1,4 @@
-nav {
+.navbar {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -42,4 +42,35 @@ nav {
 
 .account img {
     padding: 0rem 0.5rem;
+}
+
+.hamIcon{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+.mobileNav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.25rem 0rem;
+    gap: 7rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #F5F5F5;
+}
+
+.mobileList{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+    margin: 0rem 2rem;
+    padding: 0rem 1rem;
+
 }

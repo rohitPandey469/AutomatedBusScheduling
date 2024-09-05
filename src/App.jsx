@@ -15,12 +15,12 @@ const App = () => {
 
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       {/* <Login /> */}
       {/* <Register/> */}
       {/* <ForgotPassword/> */}
       {/* <CreateNewPassword/> */}
-      <OTP/>
+      {/* <OTP/> */}
     </>
   );
 };
