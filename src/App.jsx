@@ -12,6 +12,7 @@ import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 import CreateNewPassword from "./pages/ForgotPassword/CreateNewPassword";
 import OTP from "./pages/ForgotPassword/OTP";
 import SchedulerDashboard from "./pages/SchedulerDashboard/SchedulerDashboard";
+import Scheduler from "./pages/Scheduler/Scheduler"
 
 // Fake authentication function (replace with actual authentication logic)
 const isAuthenticated = () => {
@@ -29,8 +30,7 @@ const ProtectedRoute = ({ children }) => {
   }
   return children;
 };
-import SchedulerTemp from "./pages/Scheduler/Scheduler";
-import Scheduler from "./pages/SchedulerDashboard/components/ScheduleList"
+// import Scheduler from "./pages/SchedulerDashboard/components/ScheduleList";
 // import { Outlet } from 'react-router-dom'
 
 const App = () => {
@@ -59,19 +59,12 @@ const App = () => {
               </ProtectedRoute>
             }
           />
-
+          <Route path="/scheduler" element={<Scheduler />} />
           {/* Default Route */}
           <Route path="*" element={<Navigate to="/login" />} />
         </Routes>
       )}
     </Router>
-      {/* <Login /> */}
-      {/* <Register/> */}
-      {/* <ForgotPassword/> */}
-      {/* <CreateNewPassword/> */}
-      {/* <OTP/> */}
-      <SchedulerTemp/>
-    </>
   );
 };
 
