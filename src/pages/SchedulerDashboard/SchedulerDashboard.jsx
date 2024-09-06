@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import ScheduleList from "../components/ScheduleList";
-import Sidebar from "../components/Sidebar";
-import CreateSchedule from "../components/CreateSchedule";
-import SearchBar from "../components/SearchBar";
-import ScheduleDetail from "../components/ScheduleDetail";
+import ScheduleList from "./components/ScheduleList";
+import Sidebar from "./components/Sidebar";
+import CreateSchedule from "./components/CreateSchedule";
+import SearchBar from "./components/SearchBar";
+import ScheduleDetail from "./components/ScheduleDetail";
 
 const SchedulerDashboard = () => {
   const [schedules, setSchedules] = useState([]);
