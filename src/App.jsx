@@ -5,7 +5,6 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
@@ -38,7 +37,6 @@ const App = () => {
 
   return (
     <Router>
-      <Navbar />
       {isLoading ? (
         <Loader />
       ) : (
@@ -52,14 +50,14 @@ const App = () => {
 
           {/* Protected Route - only accessible if the user is authenticated */}
           <Route
-            path="/scheduler-dashboard"
+            path="/scheduler"
             element={
               <ProtectedRoute>
                 <SchedulerDashboard />
               </ProtectedRoute>
             }
           />
-          <Route path="/scheduler" element={<Scheduler />} />
+          <Route path="/scheduler-dashboard" element={<Scheduler />} />
           {/* Default Route */}
           <Route path="*" element={<Navigate to="/login" />} />
         </Routes>
