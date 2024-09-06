@@ -10,12 +10,14 @@ const Scheduler = () => {
         <h2>Bus Route</h2>
         <form action="">
           <span className={styles.label}>Enter Bus Number: </span>
-          <input type="text" placeholder="UP14 QT 0069" required />
+          <input type="text" placeholder="UP14 45 0012" required />
         </form>
         <span className={styles.label}>Route:</span>
         <img className={styles.route} src={Route} alt="" />
-        <span className={styles.geoLablel}>Geographic Location</span>
+        <div className={styles.map}>
+        <span className={styles.Lablel}>Geographic Location: </span>
         <GoogleMapComponent />
+        </div>
       </section>
     </>
   );
