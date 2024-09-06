@@ -14,7 +14,7 @@ const defaultCenter = {
 
 const GoogleMapComponent = () => {
   return (
-    <div style={{ width: "75.5rem", }}>
+    <div style={{ width: "80vw", height:"50rem", marginTop:"1rem"}}>
       <LoadScript googleMapsApiKey="AIzaSyBRPU9f_neKrMRo33LDanLxwMxnqN5l0fU">
         <GoogleMap
           mapContainerStyle={mapStyles}

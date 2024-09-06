@@ -2,10 +2,12 @@ import React from "react";
 import Route from "../../../public/assets/Frame 29.png";
 import styles from "./Scheduler.module.css";
 import GoogleMapComponent from "../../components/GoogleMaps/GoogleMapComponent";
+import Navbar from './../../components/Navbar/Navbar';
 
 const Scheduler = () => {
   return (
     <>
+      <Navbar/>
       <section className={styles.scheduler}>
         <h2>Bus Route</h2>
         <form action="">
@@ -15,7 +17,7 @@ const Scheduler = () => {
         <span className={styles.label}>Route:</span>
         <img className={styles.route} src={Route} alt="" />
         <div className={styles.map}>
-        <span className={styles.Lablel}>Geographic Location: </span>
+        <span className={styles.label}>Geographic Location: </span>
         <GoogleMapComponent />
         </div>
       </section>
