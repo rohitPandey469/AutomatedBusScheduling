@@ -29,6 +29,9 @@ const ProtectedRoute = ({ children }) => {
   }
   return children;
 };
+import SchedulerTemp from "./pages/Scheduler/Scheduler";
+import Scheduler from "./pages/SchedulerDashboard/components/ScheduleList"
+// import { Outlet } from 'react-router-dom'
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -62,6 +65,13 @@ const App = () => {
         </Routes>
       )}
     </Router>
+      {/* <Login /> */}
+      {/* <Register/> */}
+      {/* <ForgotPassword/> */}
+      {/* <CreateNewPassword/> */}
+      {/* <OTP/> */}
+      <SchedulerTemp/>
+    </>
   );
 };
 
