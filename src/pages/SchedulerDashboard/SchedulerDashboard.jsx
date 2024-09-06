@@ -40,10 +40,21 @@ const SchedulerDashboard = () => {
   };
 
   return (
-    <div style={{ display: "flex" }}>
-      <Sidebar onDateSelect={handleDateSelect} notifications={notifications} />
-      <div style={{ flex: 1, padding: "20px" }}>
-        <SearchBar onSearch={handleSearch} />
+    <div
+      style={{
+        display: "flex",
+        padding: "3.5rem",
+        justifyContent: "space-between",
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          padding: "3rem",
+          border: "2px solid green",
+        }}
+      >
         <ScheduleList schedules={schedules} onClick={handleScheduleClick} />
         <button onClick={handleCreateSchedule}>Create New Schedule</button>
         {isCreating && <CreateSchedule onClose={handleCloseCreateSchedule} />}
@@ -51,7 +62,9 @@ const SchedulerDashboard = () => {
           schedule={selectedSchedule}
           onClose={() => setSelectedSchedule(null)}
         />
+        <SearchBar onSearch={handleSearch} />
       </div>
+      <Sidebar onDateSelect={handleDateSelect} notifications={notifications} />
     </div>
   );
 };

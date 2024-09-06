@@ -4,7 +4,7 @@ import Notifications from './Notifications';
 
 const Sidebar = ({ onDateSelect, notifications }) => {
   return (
-    <div>
+    <div style={{border:"2px solid red"}}>
       <Calendar onDateSelect={onDateSelect} />
       <Notifications notifications={notifications} />
     </div>

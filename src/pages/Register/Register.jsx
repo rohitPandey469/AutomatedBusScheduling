@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from "react-router-dom";
 import Logo from "../../../public/assets/logo.svg";
 import styles from "./Register.module.css";
 
 const Register = () => {
+  const navigate = useNavigate();
   const [designation, setDesignation] = useState("");
   const [mobile, setMobile] = useState("");
   const [username, setUsername] = useState("");
@@ -13,18 +14,18 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     const userData = {
-      role : designation,
+      role: designation,
       mobile,
       username,
       password,
     };
 
     try {
-      const response = await fetch('http://localhost:5000/auth/register', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const response = await fetch("http://localhost:5000/auth/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(userData),
       });
 
@@ -32,10 +33,14 @@ const Register = () => {
 
       if (response.ok) {
         setSuccess("Registration successful! You can now log in.");
+        setTimeout(() => {
+          navigate("/scheduler-dashboard");
+        }, 1000);
         setError("");
       } else {
         setError(data.message || "Something went wrong during registration.");
         setSuccess("");
+        navigate("/scheduler-dashboard");
       }
     } catch (error) {
       setError("An error occurred. Please try again.");
@@ -87,7 +92,7 @@ const Register = () => {
           Register
         </button>
       </form>
-      
+
       {error && <p className={styles.error}>{error}</p>}
       {success && <p className={styles.success}>{success}</p>}
     </div>
