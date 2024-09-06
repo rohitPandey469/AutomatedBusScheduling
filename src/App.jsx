@@ -5,6 +5,8 @@ import Register from "./pages/Register/Register";
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 import CreateNewPassword from "./pages/ForgotPassword/CreateNewPassword";
 import OTP from "./pages/ForgotPassword/OTP";
+import SchedulerTemp from "./pages/Scheduler/Scheduler";
+import Scheduler from "./pages/SchedulerDashboard/components/ScheduleList"
 // import { Outlet } from 'react-router-dom'
 
 const App = () => {
@@ -21,6 +23,7 @@ const App = () => {
       {/* <ForgotPassword/> */}
       {/* <CreateNewPassword/> */}
       {/* <OTP/> */}
+      <SchedulerTemp/>
     </>
   );
 };

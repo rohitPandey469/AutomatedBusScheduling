@@ -1,0 +1,35 @@
+.route {
+    width: 78rem;
+    height: 13rem;
+    position: absolute;
+    top: 19rem;
+    left: 3rem;
+    margin-top: 1rem;
+}
+
+.scheduler {
+    padding-left: 4rem;
+    padding-top: 10rem;
+    background: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.label {
+    font-weight: bolder;
+    margin: 1.5rem 0rem;
+}
+
+.geoLabel{
+    font-weight: bolder;
+    margin: 1.5rem 0rem;
+    
+}
+
+form input {
+    border-radius: 8px;
+    border: 2px solid #0077B6;
+    background: #C4DCE8;
+    padding: 0.5rem 0.5rem;
+}

@@ -115,5 +115,5 @@ const Navbar = ({ setIsModalOpen, windowSize }) => {
     </header>
   );
 };
-
+ 
 export default Navbar;
