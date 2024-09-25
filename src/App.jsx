@@ -12,6 +12,7 @@ import CreateNewPassword from "./pages/ForgotPassword/CreateNewPassword";
 import OTP from "./pages/ForgotPassword/OTP";
 import SchedulerDashboard from "./pages/SchedulerDashboard/SchedulerDashboard";
 import Scheduler from "./pages/Scheduler/Scheduler"
+import Admin from "./pages/Admin/admin"
 
 // Fake authentication function (replace with actual authentication logic)
 const isAuthenticated = () => {
@@ -47,6 +48,7 @@ const App = () => {
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/reset-password" element={<CreateNewPassword />} />
           <Route path="/otp" element={<OTP />} />
+          <Route path="/admin" element={<Admin />} />
 
           {/* Protected Route - only accessible if the user is authenticated */}
           <Route
